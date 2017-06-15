@@ -1,0 +1,55 @@
+$btn-padding-v:5px;
+$btn-padding-h:10px;
+$btn-radius:5px;
+
+$btn-size-s:16px;
+$btn-size-m:24px;
+$btn-size-l:32px;
+
+$btn-default:#ffffff;
+$btn-primary:$primary-color;
+$btn-warning:yellow;
+$btn-danger:#ff0000;
+
+.btn{
+    padding:$btn-padding-v $btn-padding-h;
+    border-radius: $btn-radius;
+    box-shadow:2px 4px 4px rgba(#ffffff, 0.2);
+}
+
+@mixin btn-size($size){
+    font-size:$size;
+}
+
+@mixin btn-bg-color($color){
+    background-color:$color;
+}
+
+@mixin gen-btn($size,$bg-color,$hover-color){
+    @extend .btn;
+    @include btn-size($size);
+    @include btn-bg-color($bg-color);
+    &:hover{
+        @include btn-bg-color($hover-color);
+    }
+}
+
+.btn-default{
+    @include gen-btn($btn-size-s,$btn-default,#f5f5f7);
+}
+.btn-default-m{
+     @include gen-btn($btn-size-m,$btn-default,#f5f5f7);
+}
+.btn-default-l{
+     @include gen-btn($btn-size-l,$btn-default,#f5f5f7);
+}
+
+.btn-primary{
+     @include gen-btn($btn-size-s,$btn-primary,$dark-color);
+}
+.btn-primary-m{
+     @include gen-btn($btn-size-m,$btn-primary,$dark-color);
+}
+.btn-primary-l{
+     @include gen-btn($btn-size-l,$btn-primary,$dark-color);
+}

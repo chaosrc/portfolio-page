@@ -1,0 +1,22 @@
+$sm:756px;
+$md:960px;
+$lg:1440px;
+
+@mixin makeColumns($dev){
+    @for $i from 1 through 12{
+        .col-#{$dev}-#{$i}{
+            float:left;
+            width:percentage($i/12);
+        }
+    }
+
+}
+
+@media (max-width:$sm){
+    @include makeColumns("sm");
+}
+
+@media (min-width:$lg){
+    @include makeColumns("lg")
+}
+

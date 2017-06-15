@@ -1,0 +1,38 @@
+
+
+$primary-color:#00796B;
+$blank-color:#E0F2F1;
+$dark-color:#00695C;
+$lighter-color:#009688;
+
+$max-width:800px;
+@import "basic.scss";
+@import "grid.scss";
+@import "flex.scss";
+body{
+    background-color:#ffa500;
+}
+
+.action-bar-container{
+    background-color:$primary-color;
+    /*sticky the action bar to the window top*/
+    position:sticky;
+    top:0;
+    
+    .action-bar{
+        max-width:$max-width;
+        margin:auto;
+
+        .action-logo{
+
+        }
+        .action-menu{
+
+        }
+        .action-button{
+
+        }
+
+    }
+
+}

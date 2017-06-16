@@ -22,6 +22,7 @@ body{
     .action-bar{
         max-width:$max-width;
         margin:auto;
+        text-align:center;
 
         .action-logo{
 
@@ -35,4 +36,12 @@ body{
 
     }
 
+}
+
+@media (max-width:600px){
+    .action-menus{
+        position:absolute;
+        top:102%;
+        right:0;
+    }
 }

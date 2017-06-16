@@ -12,8 +12,9 @@
 }
 
 @each $name,$content in (center: center, start:flex-start,
-                         end:flex-end, baseline:baseline,
-                         stretch:stretch ){
+                         end:flex-end,between:space-between,
+                         around:space-around 
+                        ){
     .flex-row-#{$name}{
         @extend .flex-row;
         justify-content:$content;
@@ -22,8 +23,8 @@
 
 
 @each $name,$content in (center: center, start:flex-start,
-                         end:flex-end, between:space-between,
-                         around:space-around ){
+                         end:flex-end, baseline:baseline,
+                         stretch:stretch){
     .flex-align-#{$name}{
          align-items:$content;
     }

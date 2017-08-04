@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "module":"amd",
+        "outDir": "./build",
+        "target": "es5"
+    }
+    
+
+}

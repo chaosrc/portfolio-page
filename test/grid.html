@@ -5,8 +5,86 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="grid.css" rel="stylesheet">
+         <link href="../css/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+         <script src=http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=appkey type="text/javascript" charset="utf-8"></script>
+        <style>
+            body{
+                font-family: FontAwesome;
+            }
+            div span{
+                font-size:40px;
+                display:inline-block;
+            }
+            div span::before{
+                content:"";
+                border-bottom:5px green solid;
+                width: 20px;
+
+            }
+            hr{
+                border:0;
+                border-top:5px red solid;
+                text-align:center;
+            }
+            hr::after{
+                content:"\f121";
+                font-family:FontAwesome;
+                font-size:2em;
+                position:relative;
+                top:-.8em;
+            }
+            .split{
+                width: 300px;
+                position: relative;
+            }
+            .split::after{
+                content:'';
+                border-bottom: 5px red solid;
+                width:50px;
+                position: absolute;
+
+            }
+            .split::before{
+                content:'';
+                border-bottom: 5px red solid;
+                width:50px;
+                position: absolute;
+
+            }
+            span{
+                color: red;
+            }
+            div{
+                color: green;
+            }
+        </style>
     </head>
     <body>
+        <div>
+            <hr>
+        </div>
+
+
+        <div class="split">&#xf121;
+            </div>
     
+
+        <div>
+            <span>Hello World</span>
+        </div>
+
+        <script>
+            WB2.anyWhere(function(W){
+            W.widget.publish({
+                action:"pubilish",
+                type:"web",
+                language:"zh_cn",
+                button_type:"gray",
+                button_size:"middle",
+                refer:"y",
+                id: "wb_publisher"
+                });
+            });
+        </script>
     </body>
 </html>

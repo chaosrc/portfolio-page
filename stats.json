@@ -1,0 +1,30 @@
+
+[at-loader] Using typescript@2.3.4 from typescript and "tsconfig.json" from /home/chao/fcc-app/profilo-app/tsconfig.json.
+
+
+[at-loader] Checking started in a separate process...
+
+[at-loader] Ok, 0.299 sec.
+Hash: 4321dbb743a429c85dbf
+Version: webpack 2.6.1
+Time: 7011ms
+        Asset      Size  Chunks             Chunk Names
+    bundle.js   5.75 kB       0  [emitted]  main
+    style.css   5.44 kB       0  [emitted]  main
+bundle.js.map   7.08 kB       0  [emitted]  main
+style.css.map  86 bytes       0  [emitted]  main
+   [0] ./lib/animate.js 69 bytes {0} [built]
+       [] -> factory:13ms building:135ms = 148ms
+   [1] ./lib/component.ts 1.22 kB {0} [built]
+       [] -> factory:161ms building:5776ms = 5937ms
+   [2] ./css/app.scss 41 bytes {0} [built]
+       [] -> factory:532ms building:5808ms = 6340ms
+   [3] ./src/app.js 862 bytes {0} [built]
+        factory:40ms building:79ms = 119ms
+   [4] ./~/css-loader/lib/css-base.js 2.26 kB [built]
+       [] -> factory:4ms building:31ms = 35ms
+Child extract-text-webpack-plugin:
+       [0] ./~/css-loader/lib/css-base.js 2.26 kB {0} [built]
+           [] -> factory:3ms building:9ms = 12ms
+       [1] ./~/css-loader!./~/sass-loader/lib/loader.js!./css/app.scss 5.86 kB {0} [built]
+            factory:6ms building:64ms = 70ms

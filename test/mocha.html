@@ -1,0 +1,71 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mocha Tests</title>
+  <link href="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.css" rel="stylesheet" />
+  <style>
+    .slide{
+      background:darkcyan;
+      margin:20px;
+      max-width:400px;
+      /*display:none;*/
+      overflow:hidden;
+    }
+    p{
+      width:100px;
+    }
+    #slide-down2{
+      display:flex;
+      flex-direction: row;
+      flex-wrap:wrap;
+    }
+    #slide-down3{
+      height:20%;
+    }
+  </style>
+</head>
+<body>
+  <button id="jq-slide-d">JQuery down</button>
+  <button id="jq-slide-u">JQuery up</button>
+  <div id="mocha" style="height:400px;overflow:hidden"></div>
+  <!--<div style="width:100px;height:1000px;background:gray;"></div>-->
+  <div id="test-animate" style="width:100px;height:50px;background:green;"></div>
+  <div id="slide-down1" class="slide">
+    <p>Slide down</p>
+    <p>Slide down</p>
+  </div>
+  <div id="slide-down2" class="slide">
+    <p>Slide down</p>
+    <p>Slide down</p>
+  </div>
+  <div id="slide-down3" class="slide">
+    <p>Slide down</p>
+    <p>Slide down</p>
+  </div>
+
+
+
+  <script src="https://cdn.rawgit.com/jquery/jquery/2.1.4/dist/jquery.min.js"></script>
+  <script src="https://cdn.rawgit.com/Automattic/expect.js/0.3.1/index.js"></script>
+  <script src="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.js"></script>
+
+  <script>mocha.setup('bdd')</script>
+  <script src="boundle.js"></script>
+  <script>
+    mocha.checkLeaks();
+    mocha.globals(['jQuery']);
+    mocha.run();
+  </script>
+
+  <script>
+    $('#jq-slide-d').click(()=>{
+      $('.slide').slideDown();
+    });
+    $('#jq-slide-u').click(()=>{
+      $('.slide').slideUp();
+    });
+
+  </script>
+ 
+</body>
+</html>

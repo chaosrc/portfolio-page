@@ -16,7 +16,7 @@ $lg:1440px;
     @include makeColumns("sm");
 }
 
-@media (min-width:$lg){
+@media (min-width:$sm){
     @include makeColumns("lg")
 }
 
